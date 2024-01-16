@@ -8,15 +8,16 @@ nouns = ['apple', 'dinosaur', 'ball', 'toaster', 'goat', 'dragon', 'hammer', 'du
 print('Welcome to Password Picker!')
 
 while True: 
-    adjective = random.choice(adjectives)
-    noun = random.choice(nouns)
-    number = random.randrange(0, 100)
-    special_char = random.choice(string.punctuation)
+    for num in range(3):
+        adjective = random.choice(adjectives)
+        noun = random.choice(nouns)
+        number = random.randrange(0, 100)
+        special_char = random.choice(string.punctuation)
 
-    password = adjective + noun + str(number) + special_char
+        password = adjective + noun + str(number) + special_char
 
-    print('Your new password is: %s' % password)
+        print('Your new password is: %s' % password)
 
     response = input('Would you like another password? Type y or n: ')
     if response == 'n':
-        break
+            break
